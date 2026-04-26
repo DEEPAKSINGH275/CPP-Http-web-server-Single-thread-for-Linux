@@ -1,7 +1,7 @@
 /*
-    Rohit Yadav
-    NIT JAlandhar
-    IT 3rd Year
+    Deepak Singh
+    NIT Jalandhar
+    CSE 3rd Year
     PROJECT: HTTP WEB SERVER for Linux
     DATE: 22nd June,2025
 */
@@ -37,4 +37,4 @@ namespace HDE
 
 }
 
-#endif 
+#endif
