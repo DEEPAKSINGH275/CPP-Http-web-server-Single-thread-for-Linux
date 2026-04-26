@@ -136,7 +136,7 @@ or
 ```bash
 http://127.0.0.1:3000
 ```
-
+<img width="1717" height="689" alt="project_preview.png" src="https://github.com/user-attachments/assets/378a132d-c2d0-411a-80e5-fd8068909e66" />
 ---
 
 ## 🧠 Learning Outcomes
@@ -149,12 +149,6 @@ This project teaches:
 * Building backend infrastructure from scratch
 * Clean OOP design and class architecture
 * TCP/IP communication using sockets
-
----
-
-## 📌 Resume Description
-
-Built a single-threaded HTTP web server in C++ on Linux using socket programming, implementing TCP communication, request handling, and browser response generation on localhost.
 
 ---
 
