@@ -5,7 +5,6 @@
     PROJECT: HTTP WEB SERVER for Linux
     DATE: 22nd June,2025
 */
-
 #include "connectingsocket.hpp"
 using namespace std;
 
