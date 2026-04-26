@@ -1,112 +1,166 @@
-# c++-Http-web-server-Single-thread-for-Linux-
-A single thread http web server built from scratch in cpp. (PROJECT)
 # 🚀 Single-threaded HTTP Web Server in C++
 
-> Created by **Rohit Yadav**  
-> 3rd Year | NIT Jalandhar | IT Branch
+Created by **Deepak Singh**
+**3rd Year | CSE | NIT Jalandhar**
 
-This is a **single-threaded HTTP web server** built entirely from scratch using **C++ and low-level Linux socket programming**. It handles raw HTTP requests, parses them manually, and responds with HTML or plain text — all without using any external libraries or frameworks.
-
-
-
-
+This is a single-threaded HTTP web server built entirely from scratch using **C++** and low-level **Linux socket programming**. It handles raw HTTP requests, parses them manually, and responds with HTML or plain text — all without using any external libraries or frameworks.
 
 ---
 
 ## 🌟 Features
 
-- ✅ Manual socket creation, binding, listening, accepting
-- ✅ Parses raw HTTP GET requests
-- ✅ Multi-threaded: handles multiple browser clients in parallel
-- ✅ Clean object-oriented architecture
-- ✅ Serves static HTML files or plain responses
-- ✅ 100% written in C++ with no external dependencies
+* ✅ Manual socket creation, binding, listening, and accepting
+* ✅ Parses raw HTTP GET requests
+* ✅ Single-threaded server architecture
+* ✅ Clean object-oriented architecture
+* ✅ Serves static HTML files or plain text responses
+* ✅ 100% written in C++ with no external dependencies
 
 ---
 
 ## 🔧 Requirements
 
-Works on any **Linux** system with `g++`.
+Works on any Linux system with `g++` installed.
 
-### Install g++ if not already installed:
+Install g++ if not already installed:
+
 ```bash
 sudo apt update
 sudo apt install g++
 ```
-##🧩 Project Structure
-```
+
+---
+
+## 🧩 Project Structure
+
+```text
 .
-├── simplesocket.hpp / cpp       # Base socket class (create socket, test connection)
-├── bindingsocket.hpp / cpp      # Adds bind() functionality
-├── connectingsocket.hpp / cpp   # Adds connect() (for client-side use)
-├── listeningsocket.hpp / cpp    # Adds listen() for server-side
-├── simpleserver.hpp / cpp       # Abstract class for a server
-├── testserver.hpp / cpp         # Final server logic (multi-threaded)
-├── test.cpp                     # Entry point to run the server
-├── main.cpp                     # Optional: used for testing socket classes
-├── index.html                   # Optional: static HTML file to serve
-└── README.md                    # This file
+├── Networking/
+│   ├── simplesocket.hpp / cpp       # Base socket class (create socket, test connection)
+│   ├── bindingsocket.hpp / cpp      # Adds bind() functionality
+│   ├── connectingsocket.hpp / cpp   # Adds connect() (for client-side use)
+│   ├── listeningsocket.hpp / cpp    # Adds listen() for server-side
+│   ├── simpleserver.hpp / cpp       # Abstract class for a server
+│   ├── testserver.hpp / cpp         # Final server logic
+│   ├── test.cpp                     # Entry point to run the server
+│   ├── main.cpp                     # Optional testing file
+│   └── index.html                   # Optional static HTML file
+└── README.md
 ```
 
-**##⚙️ How It Works**
-The server uses:
-socket(), bind(), listen(), accept(), read(), and write()
-Each incoming browser request is handled in its own thread
-testserver implements accepter, handler, and responder
+---
 
-**##🚀 Running on Linux**
-   1. 📁 Clone or Extract the Project
-   ```bash
-   git clone https://github.com/your-username/http-web-server.git
-   cd http-web-server
+## ⚙️ How It Works
 
-   ```
-   2. Compile
-   ```bash
-   g++ -std=c++17 -pthread -o server \
-    test.cpp \
-    testserver.cpp \
-    simpleserver.cpp \
-    listeningsocket.cpp \
-    bindingsocket.cpp \
-    connectingsocket.cpp \
-    simplesocket.cpp
+The server uses the following Linux system calls:
 
-   ```
-   3.Run the server
-   ```bash
-   ./server
+* `socket()`
+* `bind()`
+* `listen()`
+* `accept()`
+* `read()`
+* `write()`
+* `close()`
 
-   ```
-   you will see
-   ```bash
-   ---waiting---
+Flow:
 
-   ```
-   4. 🌐 Open in Browser
-      go to:
-   ```bash
-   http://localhost:3000
+1. Creates a socket
+2. Binds it to `localhost:3000`
+3. Starts listening for browser requests
+4. Accepts incoming client connections
+5. Reads raw HTTP requests
+6. Sends HTTP response back to browser
+7. Closes the connection
 
-   ```
+---
 
-![image](https://github.com/user-attachments/assets/bfa8bb52-89fe-40c0-847b-46023bd1e7f1)
+## 🚀 Running on Linux
 
+### 1. Clone the Project
 
-![image](https://github.com/user-attachments/assets/4c233eab-bd18-4a0b-8c00-ffe2bb7e2de1)
+```bash
+git clone https://github.com/DEEPAKSINGH275/CPP-Http-web-server-Single-thread-for-Linux.git
+cd CPP-Http-web-server-Single-thread-for-Linux
+```
 
-**🧠 Learning Outcomes**
+---
+
+### 2. Move to Networking Folder
+
+```bash
+cd Networking
+```
+
+---
+
+### 3. Compile the Project
+
+```bash
+g++ -std=c++17 -pthread -o server \
+test.cpp \
+testserver.cpp \
+simpleserver.cpp \
+listeningsocket.cpp \
+bindingsocket.cpp \
+connectingsocket.cpp \
+simplesocket.cpp
+```
+
+---
+
+### 4. Run the Server
+
+```bash
+./server
+```
+
+You will see:
+
+```bash
+---waiting---
+http://localhost:3000
+```
+
+---
+
+### 5. Open in Browser
+
+Go to:
+
+```bash
+http://localhost:3000
+```
+
+or
+
+```bash
+http://127.0.0.1:3000
+```
+
+---
+
+## 🧠 Learning Outcomes
+
 This project teaches:
-   -Socket programming in C++
-   -How HTTP actually works (manual request parsing)
-   -Threading with std::thread
-   -Building backend infrastructure from scratch
-   -Clean OOP design and class architecture
 
+* Socket programming in C++
+* How HTTP actually works (manual request parsing)
+* Linux networking fundamentals
+* Building backend infrastructure from scratch
+* Clean OOP design and class architecture
+* TCP/IP communication using sockets
 
+---
 
-**
-Made by Rohit Yadav
+## 📌 Resume Description
+
+Built a single-threaded HTTP web server in C++ on Linux using socket programming, implementing TCP communication, request handling, and browser response generation on localhost.
+
+---
+
+## 👨‍💻 Made By
+
+**Deepak Singh**
+3rd Year, Computer Science and Engineering
 NIT Jalandhar, India
-2025**
-
+2026
