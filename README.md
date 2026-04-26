@@ -157,4 +157,3 @@ This project teaches:
 **Deepak Singh**
 3rd Year, Computer Science and Engineering
 NIT Jalandhar, India
-2026
